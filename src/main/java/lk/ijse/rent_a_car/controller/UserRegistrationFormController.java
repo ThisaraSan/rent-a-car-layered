@@ -42,6 +42,10 @@ public class UserRegistrationFormController {
         stage.close();
     }
 
+    public void clear(){
+
+    }
+
     public void btnSaveAction(ActionEvent actionEvent){
         String name = txtName.getText();
         String nic = txtNic.getText();
@@ -57,10 +61,29 @@ public class UserRegistrationFormController {
             boolean isSaved = newUser.saveUser(newUserDto);
             if(isSaved){
                 new Alert(Alert.AlertType.CONFIRMATION,"User Created Successfully").show();
+                clearText();
+
             }
         } catch (Exception e) {
-            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+            String eror= e.getMessage();
+            editError("USER CTEATION FAILED!", "Please retry with changing following.",eror);
         }
 
+    }
+    public void editError(String title, String content, String error){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(content);
+        alert.setContentText(error);
+        alert.showAndWait();
+    }
+
+    private void clearText(){
+        txtName.clear();
+        txtNic.clear();
+        txtContactNo.clear();
+        txtAddress.clear();
+        txtCreateUserName.clear();
+        txtCreatePassword.clear();
     }
 }
