@@ -66,7 +66,7 @@ public class UserRegistrationFormController {
             }
         } catch (Exception e) {
             String eror= e.getMessage();
-            editError("USER CTEATION FAILED!", "Please retry with changing following.",eror);
+            editError("USER CTEATION FAILED!", "Please retry with following changes.",eror);
         }
 
     }

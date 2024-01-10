@@ -1,6 +1,9 @@
 package lk.ijse.rent_a_car.business.impl;
 
+import lk.ijse.rent_a_car.business.HashCodeGenarator;
 import lk.ijse.rent_a_car.business.custom.UserCustomBo;
+import lk.ijse.rent_a_car.dao.DaoFactory;
+import lk.ijse.rent_a_car.dao.DaoType;
 import lk.ijse.rent_a_car.dao.custom.UserCustomDao;
 import lk.ijse.rent_a_car.dao.impl.NewUserDaoImpl;
 import lk.ijse.rent_a_car.dto.NewUserDto;
@@ -19,33 +22,16 @@ public class NewUserBoImpl implements UserCustomBo {
         String userName = newUserDto.getUserName();
         String password = newUserDto.getPassword();
 
-        String hashPassword = hashPasswordMD5(password);
+        String hashPassword = HashCodeGenarator.hashPasswordMD5(password);
 
         NewUserEntity newUserEntity = new NewUserEntity(name,nic, contact, address, userName,hashPassword);
 
-        UserCustomDao userCustomDao = new NewUserDaoImpl();
+        UserCustomDao userCustomDao = DaoFactory.getDao(DaoType.NEWUSER);
 
         boolean isSaved = userCustomDao.saveUser(newUserEntity);
 
         return isSaved;
     }
 
-    private static String hashPasswordMD5(String password) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] hashedPasswordBytes = md.digest(password.getBytes());
-            StringBuilder hexString = new StringBuilder();
-            for (byte b : hashedPasswordBytes) {
-                String hex = Integer.toHexString(0xFF & b);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+
 }

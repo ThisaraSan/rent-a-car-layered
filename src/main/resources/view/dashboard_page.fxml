@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="540.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rent_a_car.controller.DashboardPageController">
+   <children>
+      <AnchorPane prefHeight="540.0" prefWidth="200.0" style="-fx-background-color: rgba(209, 204, 192,1.0);">
+         <children>
+            <Label layoutX="40.0" layoutY="32.0" text="Main Menu">
+               <font>
+                  <Font name="Bell MT Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stagePane" layoutX="200.0" prefHeight="540.0" prefWidth="546.0" />
+      <AnchorPane fx:id="basicPane" layoutX="199.0" prefHeight="540.0" prefWidth="546.0">
+         <children>
+            <Label layoutX="275.0" layoutY="8.0" opacity="0.14" text="Car Hire" textFill="#09077af1">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="64.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <ImageView fx:id="image" fitHeight="127.0" fitWidth="294.0" layoutX="256.0" layoutY="85.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cars.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

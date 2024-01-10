@@ -1,5 +1,6 @@
 package lk.ijse.rent_a_car.dao;
 
+import lk.ijse.rent_a_car.dao.impl.LoginUserDaoImpl;
 import lk.ijse.rent_a_car.dao.impl.NewUserDaoImpl;
 
 public class DaoFactory {
@@ -7,6 +8,8 @@ public class DaoFactory {
         switch (type){
             case NEWUSER:
                 return (T) new NewUserDaoImpl();
+            case LOGINUSER:
+                return (T) new LoginUserDaoImpl();
             default:
                 return null;
         }
