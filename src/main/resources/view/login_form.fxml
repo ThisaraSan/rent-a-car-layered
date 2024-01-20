@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rent_a_car.controller.LoginFormController">
+<AnchorPane fx:id="rootnodee" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rent_a_car.controller.LoginFormController">
    <children>
-      <Label layoutX="307.0" layoutY="24.0" text="Car Hire" textFill="#09077af1">
+      <Label layoutX="307.0" layoutY="24.0" text="Car Hire" textFill="#09077af1" AnchorPane.rightAnchor="36.19999999999999">
          <font>
             <Font name="Berlin Sans FB Bold" size="64.0" />
          </font>
@@ -21,12 +21,12 @@
             <Glow level="0.48" />
          </effect>
       </Label>
-      <Text fill="#242222ac" layoutX="296.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Car Hire Administration System. Kindly enter your credentials here to securely access the system and effectively manage our diverse fleet of vehicles. We appreciate your commitment to ensuring a smooth journey for both our customers and our fleet. Unauthorized access is strictly prohibited." wrappingWidth="278.4000366210937">
+      <Text fill="#242222ac" layoutX="296.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Car Hire Administration System. Kindly enter your credentials here to securely access the system and effectively manage our diverse fleet of vehicles. We appreciate your commitment to ensuring a smooth journey for both our customers and our fleet. Unauthorized access is strictly prohibited." wrappingWidth="278.4000366210937" AnchorPane.rightAnchor="25.599963378906295">
          <font>
             <Font name="Bell MT Bold" size="15.0" />
          </font>
       </Text>
-      <ImageView fx:id="image" fitHeight="127.0" fitWidth="294.0" layoutX="283.0" layoutY="100.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image" fitHeight="127.0" fitWidth="294.0" layoutX="283.0" layoutY="100.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="23.0">
          <image>
             <Image url="@../images/cars.png" />
          </image>
@@ -36,19 +36,19 @@
             <Font name="Bodoni MT Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="123.0" text="User Name">
+      <Label layoutX="14.0" layoutY="123.0" text="User Name" AnchorPane.leftAnchor="13.999999999999979" AnchorPane.rightAnchor="523.6">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="13.0" layoutY="191.0" text="Password">
+      <Label layoutX="13.0" layoutY="191.0" text="Password" AnchorPane.leftAnchor="13.999999999999979" AnchorPane.rightAnchor="523.6">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="16.0" layoutY="144.0" prefHeight="26.0" prefWidth="258.0" />
-      <TextField fx:id="txtPassword" layoutX="15.0" layoutY="209.0" prefHeight="26.0" prefWidth="258.0" />
-      <Button layoutX="222.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnLoginAction" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Login">
+      <TextField fx:id="txtUserName" layoutX="16.0" layoutY="144.0" prefHeight="26.0" prefWidth="258.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="325.6" />
+      <TextField fx:id="txtPassword" layoutX="15.0" layoutY="209.0" prefHeight="26.0" prefWidth="258.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="325.6" />
+      <Button layoutX="222.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnLoginAction" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Login" AnchorPane.leftAnchor="222.0" AnchorPane.rightAnchor="330.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -56,12 +56,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="16.0" layoutY="291.0" text="Haven't an Account ?">
+      <Label layoutX="16.0" layoutY="291.0" text="Haven't an Account ?" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="468.0">
          <font>
             <Font name="Berlin Sans FB" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="createAccountLabel" layoutX="138.0" layoutY="293.0" onMouseClicked="#createAccountMouseClick" prefHeight="14.0" prefWidth="98.0" text="Create an Account" textFill="#290ef2">
+      <Label fx:id="createAccountLabel" layoutX="138.0" layoutY="293.0" onMouseClicked="#createAccountMouseClick" prefHeight="14.0" prefWidth="98.0" text="Create an Account" textFill="#290ef2" AnchorPane.leftAnchor="137.99999999999997" AnchorPane.rightAnchor="363.6">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>

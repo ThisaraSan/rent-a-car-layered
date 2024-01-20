@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="basePane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rent_a_car.controller.UserRegistrationFormController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="307.0" layoutY="24.0" text="Car Hire" textFill="#09077af1">
+            <Label layoutX="307.0" layoutY="24.0" text="Car Hire" textFill="#09077af1" AnchorPane.leftAnchor="306.99999999999994" AnchorPane.rightAnchor="36.19999999999999">
                <font>
                   <Font name="Berlin Sans FB Bold" size="64.0" />
                </font>
@@ -23,7 +22,7 @@
                   <Glow level="0.48" />
                </effect>
             </Label>
-            <ImageView fx:id="image" fitHeight="127.0" fitWidth="294.0" layoutX="283.0" layoutY="100.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="127.0" fitWidth="294.0" layoutX="283.0" layoutY="100.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="282.6" AnchorPane.rightAnchor="23.0">
                <image>
                   <Image url="@../images/cars.png" />
                </image>

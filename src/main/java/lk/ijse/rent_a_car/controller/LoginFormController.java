@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.rent_a_car.business.BoFactory;
 import lk.ijse.rent_a_car.business.BoType;
@@ -18,6 +19,7 @@ import lk.ijse.rent_a_car.dto.LoginUserDto;
 import java.io.IOException;
 
 public class LoginFormController {
+    public AnchorPane rootnodee;
     @FXML
     private ImageView imageView;
     @FXML
@@ -26,11 +28,13 @@ public class LoginFormController {
     @FXML
     private TextField txtUserName;
 
+
     public void createAccountMouseClick(MouseEvent mouseEvent) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_registration_form.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.setTitle("User Registration Form");
         stage.show();
 
@@ -49,9 +53,10 @@ public class LoginFormController {
             if(isSearched){
                 Parent root = FXMLLoader.load(this.getClass().getResource("/view/dashboard_page.fxml"));
                 Scene scene = new Scene(root);
-                Stage stage = new Stage();
+                Stage stage = (Stage)this.rootnodee.getScene().getWindow();
                 stage.setScene(scene);
                 stage.setTitle("Main Menu");
+                stage.setResizable(true);
                 stage.show();
             }
         } catch (Exception e) {

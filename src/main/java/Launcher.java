@@ -17,6 +17,7 @@ public class Launcher extends Application {
         stage.setTitle("Login Form");
         stage.centerOnScreen();
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }
